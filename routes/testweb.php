@@ -294,3 +294,19 @@ Route::get('form', function () {
         ->withInput()
         ->with(['error' => true, 'message' => 'whoops!']);
 });
+
+Route::post('form', function (Illuminate\Http\Request $request) {
+    $validator = \Illuminate\Validation\Validator::make($request->all(), $this->validationRules);
+
+    if ($validator->fails()) {
+        return back()
+            ->withErrors($validator)
+            ->withInput();
+    }
+});
+
+Route::post('something_you_can\'t_do', function (\Illuminate\Http\Request $request) {
+    abort(403, 'You can\'t do that');
+    abort_unless($request->has('magictoken'), 403);
+});
+
