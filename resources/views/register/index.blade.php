@@ -8,8 +8,8 @@
           <form action="/register" method="post">
             @csrf
             <div class="form-floating">
-              <input type="text" class="form-control rounded-top @error('name')
-              is-invalid @enderror" id="name" name="name" placeholder="Name" required value="{{ old('name') }}">
+              <input type="text" class="form-control rounded-top @error('name') is-invalid
+              @enderror" id="name" name="name" placeholder="Name" autofocus required value="{{ old('name') }}">
               <label for="name">Name</label>
               @error('name')
                 <div class="invalid-feedback">
