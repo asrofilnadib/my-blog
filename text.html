@@ -1,7 +1,22 @@
 Post::create([
   'title' => 'Judul Keempat',
-  'category_id' => 3,
   'slug' => "judul-keempat",
   'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A distinctio dolorum incidunt necessitatibus, numquam odio quia? Aspernatur aut dolore, expedita explicabo iure minus molestiae nam nemo neque nostrum becati, praesentium quo quos rerum sit tenetur unde voluptatibus? Beatae commodi ea ex fugit in, incidunt ipsam iste iusto molestias mollitia nostrum porro.',
 'body' => "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A distinctio dolorum incidunt necessitatibus, numquam odio quia? Aspernatur aut dolore, expedita explicabo iure minus molestiae nam nemo neque nostrum becati, praesentium quo quos rerum sit tenetur unde voluptatibus? Beatae commodi ea ex fugit in, incidunt ipsam iste iusto molestias mollitia nostrum porro, qui quidem ratione repellendus sapiente soluta tempora vitae voluptate voluptatibus! Aliquam incidunt iure necessitatibus perspiciatis totam voluptatum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti dolores est eum hic inventore laudantium nisi porro sit. Aspernatur assumenda consequuntur cum deleniti doloremque dolores error et hic id ipsa magni natus numquam odio officiis praesentium, quasi saepe sapiente sunt suscipit tenetur totam veniam, voluptates! Aspernatur autem commodi doloribus dolorum eius eligendi esse et, impedit, nesciunt numquam, officiis tenetur. Blanditiis fugit magni minus mollitia nihil omnis rem temporibus. Asperiores aut beatae debitis non quia reiciendis velit vero voluptate voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut commodi consequatur consequuntur eligendi explicabo in officiis quasi sunt suscipit. A accusantium assumenda deleniti dolore eos eveniet ex expedita explicabo ipsa iste labore magni mollitia necessitatibus numquam, optio provident quisquam repellat saepe temporibus veniam. Ipsa magnam maxime modi quasi sed? Ad distinctio fugit, id qui quod sint tempora. Alias aperiam aspernatur cupiditate deleniti dolorem eligendi exercitationem id illo impedit ipsum magni modi pariatur possimus quae quas quasi quod quos, similique soluta sunt, tempora temporibus unde veniam. Aliquid at aut autem deleniti dolorum ex expedita ipsa ipsum iste laboriosam magnam maxime nihil, non praesentium quis quos, repellendus tempora tenetur ullam vel veniam.</p>",
 ])
+
+Category::create([
+
+])
+
+https://api.unsplash.com/search/photos?query={{ $posts[0]->category->name }}&client_id=
+
+https://api.unsplash.com/photos/?client_id=1UNUVy44jh1bEZQOC6VPzpsGqFO5-t3BKOIWwGGSmVw
+
+http://source.unsplash.com/1920x1080/?developer{{--{{ $posts[0]->category->name }}--}}
+
+https://api.unsplash.com/photos/?query=programming&client_id=1UNUVy44jh1bEZQOC6VPzpsGqFO5-t3BKOIWwGGSmVw
+
+<!--<p>By: <a href="/authors/{{ $post->author->username }}" class="text-decoration-none"> {{ $post->author->name }}</a> in
+  <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">
+    {{ $post->category->name }}</a></p>-->
