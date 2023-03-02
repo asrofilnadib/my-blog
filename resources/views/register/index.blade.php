@@ -8,8 +8,8 @@
           <form action="/register" method="post">
             @csrf
             <div class="form-floating">
-              <input type="text" class="form-control rounded-top @error('name') is-invalid
-              @enderror" id="name" name="name" placeholder="Name" autofocus required value="{{ old('name') }}">
+              <input type="text" class="form-control rounded-top @error('name') is-invalid @enderror"
+                     id="name" name="name" placeholder="Name" autofocus required value="{{ old('name') }}">
               <label for="name">Name</label>
               @error('name')
                 <div class="invalid-feedback">
@@ -19,8 +19,8 @@
             </div>
 
             <div class="form-floating">
-              <input type="text" class="form-control @error('username')
-              is-invalid @enderror" id="username" name="username" placeholder="Username" required value="{{ old('username') }}">
+              <input type="text" class="form-control @error('username') is-invalid @enderror"
+                     id="username" name="username" placeholder="Username" required value="{{ old('username') }}">
               <label for="username">Username</label>
               @error('username')
                 <div class="invalid-feedback">
@@ -30,8 +30,8 @@
             </div>
 
             <div class="form-floating">
-              <input type="email" class="form-control @error('email')
-              is-invalid @enderror" id="email" name="email" placeholder="name@example.com" required value="{{ old('email') }}">
+              <input type="email" class="form-control @error('email') is-invalid @enderror"
+                     id="email" name="email" placeholder="name@example.com" required value="{{ old('email') }}">
               <label for="email">Email address</label>
               @error('email')
                 <div class="invalid-feedback">
