@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Testing\Fluent\Concerns\Has;
-use Psy\Util\Str;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
@@ -26,13 +24,14 @@ class DatabaseSeeder extends Seeder
          'password' => Hash::make('password')
     ]);*/
 
-    /*User::create([
+    User::create([
       'name' => 'Asrofil Nadib',
+      'username' => 'asrofilnadib',
       'email' => 'asrofil@asrofil.co.id',
       'password' => bcrypt('12345'),
     ]);
 
-    User::create([
+    /*User::create([
       'name' => 'Nadib',
       'email' => 'nadib@nadib.co.id',
       'password' => bcrypt('54321'),
